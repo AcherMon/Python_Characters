@@ -21,8 +21,8 @@ def crear_guerrero():
     nuevo_guerrero = Guerrero(escenario_canvas, nombre, x, y)
     nuevo_guerrero.dibujar()
 
-    # self.lista_objetos.append(nuevo_guerrero)
-    # self.log_label.config(text=f"Se ha instanciado un objeto Clase Guerrero: {nombre}")
+    #lista_objetos.append(nuevo_guerrero)
+    #self.log_label.config(text=f"Se ha instanciado un objeto Clase Guerrero: {nombre}")
 
 def crear_mago():
     nombre = inputName.get() or "Mago Anónimo"
@@ -32,8 +32,8 @@ def crear_mago():
     nuevo_mago = Mago(escenario_canvas, nombre, x, y)
     nuevo_mago.dibujar()
 
-    # lista_objetos.append(nuevo_mago)
-    # self.log_label.config(text=f"Se ha instanciado un objeto Clase Mago: {nombre}")
+    #lista_objetos.append(nuevo_mago)
+    #self.log_label.config(text=f"Se ha instanciado un objeto Clase Mago: {nombre}")
 
 ventana = tk.Tk()
 ventana.geometry("800x700")
@@ -49,6 +49,9 @@ tk.Button(frame_control, text="Crear Mago", bg="#3498db", fg="white",
 #creamos una variable para poder dibujar sobre ella
 escenario_canvas = (tk.Canvas(ventana, width=800, height=500, bg="#2c3e50"))
 escenario_canvas.pack(fill=tk.BOTH, expand=True) #expand=True permite que crezca si la ventana cambia de tamañoventana.title("Demo Visual de POO - Mi Ventana")
+labelAtaque = tk.label(ventana)
+labelAtaque.pack(bg="#ecf0f1")
+
 
 def obtener_posicion_random():
     """Genera coordenadas aleatorias dentro del canvas."""
